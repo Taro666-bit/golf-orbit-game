@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Orbit - Play Free Online Golf Game | golforbitgame.me</title>
+    <meta name="description" content="Play Golf Orbit, a unique physics-based golf game that challenges your precision and strategy in space. Enjoy this free online golf game now!">
+    <meta name="keywords" content="Golf Orbit, online golf game, space golf, physics game, free golf game">
+    <link rel="canonical" href="https://golforbitgame.me">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            green: '#34C759',
+                            background: '#F5F5F7',
+                            text: '#1D1D1F',
+                            lightgray: '#E5E5EA',
+                            darkgray: '#8E8E93'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .game-container {
+                aspect-ratio: 16/9;
+                max-height: 80vh;
+            }
+            .fullscreen-btn {
+                transition: all 0.2s ease;
+            }
+            .fullscreen-btn:hover {
+                transform: scale(1.1);
+            }
+        }
+    </style>
+    <style>
+        /* 尝试隐藏iframe中的广告 */
+        iframe#gameIframe {
+            position: relative;
+        }
+        
+        /* 创建一个覆盖层，在广告出现位置上方 */
+        .ad-blocker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1000;
+        }
+        
+        /* 针对常见的广告位置添加特定的覆盖块 */
+        .ad-block-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background-color: transparent;
+            z-index: 1001;
+        }
+        
+        .ad-block-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            background-color: transparent;
+            z-index: 1001;
+        }
+    </style>
+</head>
+<body class="bg-apple-background text-apple-text font-sans">
+    <!-- Header Section -->
+    <header class="w-full bg-gradient-to-r from-apple-blue to-apple-green py-8 px-4 md:px-8 shadow-md">
+        <div class="max-w-6xl mx-auto">
+            <h1 class="text-4xl md:text-5xl font-bold text-white text-shadow text-center mb-4">Golf Orbit</h1>
+            <p class="text-xl text-white text-center max-w-3xl mx-auto">Experience the thrill of golf in space with Golf Orbit, a unique physics-based golf game that challenges your precision and strategy.</p>
+        </div>
+    </header>
+
+    <!-- Game Section -->
+    <section class="py-8 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="game-container w-full relative">
+                    <iframe 
+                        id="gameIframe"
+                        //src="https://html5.gamedistribution.com/02ff01e6e9f7451ba28d889a2a55eec9/?gd_sdk_referrer_url=https://www.onlinegames.io/golf-orbit/&gd_zone_config=eyJhZF90eXBlIjoibm9uZSIsImF1dG9fc3RhcnQiOnRydWV9" 
+                        src="https://html5.gamedistribution.com/02ff01e6e9f7451ba28d889a2a55eec9/" 
+                        class="w-full h-full border-0"
+                        allowfullscreen
+                        scrolling="no"
+                        title="Play Golf Orbit Online"
+                        loading="lazy">
+                    </iframe>
+                    <button id="fullscreenBtn" class="fullscreen-btn absolute bottom-4 right-4 bg-apple-blue hover:bg-blue-600 text-white py-2 px-4 rounded-lg shadow-md flex items-center z-10">
+                        <i class="fas fa-expand mr-2"></i>
+                        <span>Fullscreen</span>
+                    </button>
+                    
+                    <!-- 添加广告覆盖层 -->
+                    <div class="ad-blocker">
+                        <div class="ad-block-top"></div>
+                        <div class="ad-block-bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Information Section -->
+    <section class="py-8 px-4 md:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 border-b-2 border-apple-lightgray pb-2">How to Play Golf Orbit</h2>
+            <div class="mb-8">
+                <p class="mb-4">Golf Orbit combines the precision of golf with the unpredictable physics of space. Your goal is to navigate through challenging courses by hitting the ball into the hole with as few strokes as possible.</p>
+                <ol class="list-decimal pl-6 space-y-2">
+                    <li>Aim your shot by dragging and adjusting the direction arrow</li>
+                    <li>Control power by how far you pull back</li>
+                    <li>Release to shoot and watch your ball navigate through space</li>
+                    <li>Complete each hole with the fewest strokes possible</li>
+                    <li>Progress through increasingly challenging levels</li>
+                </ol>
+            </div>
+
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 border-b-2 border-apple-lightgray pb-2">Game Features</h2>
+            <div class="grid md:grid-cols-2 gap-6 mb-8">
+                <div class="bg-apple-background p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Unique Space Physics</h3>
+                    <p>Experience gravity fields, wormholes, and other space phenomena that affect your golf ball's trajectory.</p>
+                </div>
+                <div class="bg-apple-background p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Multiple Planets</h3>
+                    <p>Play on various planets and celestial bodies, each with their own unique gravity and challenges.</p>
+                </div>
+                <div class="bg-apple-background p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Skill Progression</h3>
+                    <p>Start with simple courses and progress to increasingly complex and challenging levels.</p>
+                </div>
+                <div class="bg-apple-background p-4 rounded-lg">
+                    <h3 class="text-xl font-semibold mb-2">Beautiful Graphics</h3>
+                    <p>Enjoy stunning visuals of space environments with colorful planets, stars, and cosmic phenomena.</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 border-b-2 border-apple-lightgray pb-2">Tips & Tricks</h2>
+            <div class="mb-8">
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Pay attention to the gravitational pull of nearby planets</li>
+                    <li>Use minimal power for precise short-distance shots</li>
+                    <li>Take advantage of gravity fields to curve your shots around obstacles</li>
+                    <li>Study the course before taking your shot to plan the best trajectory</li>
+                    <li>Sometimes a bank shot off walls or obstacles is the best approach</li>
+                    <li>Remember that different planets have different gravity strengths</li>
+                </ul>
+            </div>
+
+            <h2 class="text-3xl font-bold text-apple-blue mb-6 border-b-2 border-apple-lightgray pb-2">About Golf Orbit</h2>
+            <div class="mb-8">
+                <p class="mb-4">Golf Orbit is an innovative online game that reimagines the classic sport of golf in a space setting. Created by talented game developers who wanted to combine the strategic elements of golf with the fascinating physics of space, Golf Orbit offers a unique gaming experience that's both challenging and entertaining.</p>
+                <p class="mb-4">Whether you're a golf enthusiast or just looking for a fun physics-based puzzle game, Golf Orbit provides hours of entertainment as you master the art of space golf across various interplanetary courses.</p>
+                <p>The game is completely free to play online and works on both desktop and mobile devices. No downloads required - just aim, shoot, and enjoy!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-apple-text text-white py-6 px-4 md:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 golforbitgame.me - All Rights Reserved</p>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-apple-blue transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-apple-blue transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const fullscreenBtn = document.getElementById('fullscreenBtn');
+            const gameIframe = document.getElementById('gameIframe');
+            
+            fullscreenBtn.addEventListener('click', function() {
+                toggleFullScreen(gameIframe);
+            });
+            
+            // 监听全屏变化事件，更新按钮文本
+            document.addEventListener('fullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('webkitfullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('mozfullscreenchange', updateFullscreenButtonText);
+            document.addEventListener('MSFullscreenChange', updateFullscreenButtonText);
+            
+            function toggleFullScreen(element) {
+                if (!document.fullscreenElement &&    // 标准语法
+                    !document.mozFullScreenElement && // Firefox
+                    !document.webkitFullscreenElement && // Chrome, Safari 和 Opera
+                    !document.msFullscreenElement) {  // IE/Edge
+                    
+                    // 进入全屏
+                    if (element.requestFullscreen) {
+                        element.requestFullscreen();
+                    } else if (element.mozRequestFullScreen) {
+                        element.mozRequestFullScreen();
+                    } else if (element.webkitRequestFullscreen) {
+                        element.webkitRequestFullscreen();
+                    } else if (element.msRequestFullscreen) {
+                        element.msRequestFullscreen();
+                    }
+                } else {
+                    // 退出全屏
+                    if (document.exitFullscreen) {
+                        document.exitFullscreen();
+                    } else if (document.mozCancelFullScreen) {
+                        document.mozCancelFullScreen();
+                    } else if (document.webkitExitFullscreen) {
+                        document.webkitExitFullscreen();
+                    } else if (document.msExitFullscreen) {
+                        document.msExitFullscreen();
+                    }
+                }
+            }
+            
+            function updateFullscreenButtonText() {
+                const iconElement = fullscreenBtn.querySelector('i');
+                const textElement = fullscreenBtn.querySelector('span');
+                
+                if (document.fullscreenElement ||
+                    document.mozFullScreenElement ||
+                    document.webkitFullscreenElement ||
+                    document.msFullscreenElement) {
+                    // 当前是全屏状态
+                    iconElement.className = 'fas fa-compress mr-2';
+                    textElement.textContent = 'Exit Fullscreen';
+                } else {
+                    // 当前不是全屏状态
+                    iconElement.className = 'fas fa-expand mr-2';
+                    textElement.textContent = 'Fullscreen';
+                }
+            }
+
+            // 尝试移除广告
+            gameIframe.onload = function() {
+                try {
+                    const iframeDocument = gameIframe.contentDocument || gameIframe.contentWindow.document;
+                    
+                    // 创建一个定时器，定期检查和移除广告元素
+                    setInterval(function() {
+                        // 尝试查找和移除常见的广告容器
+                        const adElements = iframeDocument.querySelectorAll('.gd__advertisement, .gd__banner, [id*="ad"], [class*="ad"]');
+                        adElements.forEach(function(el) {
+                            el.style.display = 'none';
+                        });
+                    }, 1000);
+                } catch(e) {
+                    console.log('无法访问iframe内容，可能是由于跨域限制');
+                }
+            };
+        });
+    </script>
+</body>
+</html> 
